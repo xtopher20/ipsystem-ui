@@ -29,12 +29,12 @@ function App() {
                 element={<New inputs={userInputs} title="Add New User" />}
               />
             </Route>
-            <Route path="products">
+            <Route path="logs">
               <Route index element={<List />} />
-              <Route path=":productId" element={<Single />} />
+              <Route path=":logId" element={<Single />} />
               <Route
                 path="new"
-                element={<New inputs={productInputs} title="Add New Product" />}
+                element={<New inputs={productInputs} title="Add New Log" />}
               />
             </Route>
           </Route>

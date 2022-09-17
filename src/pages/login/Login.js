@@ -70,7 +70,7 @@ const Login = () => {
 
   const login = async (e) => {
     try {
-      const res = await axios.post("http://localhost:8800/api/auth/login", { email, password })
+      const res = await axios.post("https://ipsystemapi.herokuapp.com/api/auth/login", { email, password })
       console.log(res.data);
       localStorage.setItem("token", res.data.token)
       localStorage.setItem("id", res.data._id)

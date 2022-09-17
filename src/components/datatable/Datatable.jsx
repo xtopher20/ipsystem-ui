@@ -2,10 +2,30 @@ import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Datatable = () => {
   const [data, setData] = useState(userRows);
+
+  // const [data, setData] = useState([]);
+  // const token = localStorage.getItem("token")
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const res = await axios.get("https://ipsystemapi.herokuapp.com/api/users", {
+  //         headers: {
+  //           token: `Bearer ${token}`
+  //         }
+  //       })
+  //       setData(res.data)
+  //       console.log(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   }
+  //   getData()
+  // }, [])
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));

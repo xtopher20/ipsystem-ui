@@ -69,7 +69,7 @@ const Register = () => {
   const navigate = useNavigate()
   const register = async (e) => {
     try {
-      const res = await axios.post("http://localhost:8800/api/auth/register", { email, username, password })
+      const res = await axios.post("https://ipsystemapi.herokuapp.com/auth/register", { email, username, password })
       console.log(res.data);
       setEmail("")
       setUsername("")
